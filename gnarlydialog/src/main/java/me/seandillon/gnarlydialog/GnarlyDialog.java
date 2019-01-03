@@ -3,7 +3,7 @@ package me.seandillon.gnarlydialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
+//import android.support.annotation.NonNull;
 import android.view.View;
 import android.view.Window;
 import android.view.animation.Animation;
@@ -86,11 +86,13 @@ public class GnarlyDialog extends Dialog {
 
     // ============= Start Constructors =============
 
-    public GnarlyDialog(@NonNull Context context) {
+//    public GnarlyDialog(@NonNull Context context) {
+    public GnarlyDialog(Context context) {
         this(context, GNARLY_DIALOG_TYPE_DEFAULT);
     }
 
-    public GnarlyDialog(@NonNull Context context, int gnarlyDialogType) {
+//    public GnarlyDialog(@NonNull Context context, int gnarlyDialogType) {
+    public GnarlyDialog(Context context, int gnarlyDialogType) {
         super(context, R.style.gnarly_dialog_style);
 
         this.context = context;

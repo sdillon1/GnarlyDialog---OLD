@@ -8,8 +8,8 @@ android {
     defaultConfig {
         minSdkVersion 19
         targetSdkVersion 26
-        versionCode 1
-        versionName "0.1"
+        versionCode 7
+        versionName "0.1.6"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -49,18 +49,18 @@ apply plugin: 'com.jfrog.bintray'
 
 ext {
     bintrayRepo = 'maven'
-    bintrayName = 'gnarly-dialog'
+    bintrayName = 'gnarlydialog'
 
     publishedGroupId = 'me.seandillon'
     libraryName = 'GnarlyDialog'
-    artifact = 'gnarly-dialog'
+    artifact = 'gnarlydialog'
 
     libraryDescription = 'This is a fancy Android dialog library'
 
     siteUrl = 'https://github.com/sdillon1/GnarlyDialog'
     gitUrl = 'https://github.com/sdillon1/GnarlyDialog.git'
 
-    libraryVersion = '0.1'
+    libraryVersion = '0.1.6'
 
     developerId = 'me.seandillon'
     developerName = 'Sean Dillon'
@@ -117,6 +117,7 @@ install {
 
 task sourcesJar(type: Jar) {
     classifier = 'sources'
+//    from android.sourceSets.main.java.srcDirs
     from android.sourceSets.main.java.srcDirs
 }
 
