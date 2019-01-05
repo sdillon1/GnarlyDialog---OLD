@@ -4,6 +4,7 @@
 ## TODO ##
   * Figure out how to upload to Bintray
   * Finish cleaning up library and sample app project
+  * Make a pretty Readme here
 
 
 
