@@ -1,4 +1,54 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
+
+
+/*
+publish {
+
+    def groupProjectID = 'me.seandillon.gnarlydialog'
+    def artifactProjectID = 'GnarlyDialog'
+    def publishVersionID = '7'
+
+    userOrg = 'sdillon255'
+    repoName = 'GnarlyDialog'
+    groupId = groupProjectID
+    artifactId = artifactProjectID
+    publishVersion = publishVersionID
+    desc = 'Insert a libray description here'
+    website = 'https://github.com/sdillon1/GnarlyDialog'
+
+}
+*/
+
+publish {
+    /*
+    userOrg = 'novoda'
+    groupId = 'com.novoda'
+    artifactId = 'bintray-release'
+    publishVersion = '0.6.1'
+    desc = 'Oh hi, this is a nice description for a project, right?'
+    website = 'https://github.com/novoda/bintray-release'
+    */
+
+    def groupProjectID = 'me.seandillon.gnarlydialog'
+    def artifactProjectID = 'GnarlyDialog'
+    def publishVersionID = '7'
+
+    userOrg = 'sdillon255'
+    repoName = 'GnarlyDialog'
+    groupId = groupProjectID
+    artifactId = artifactProjectID
+    publishVersion = publishVersionID
+    desc = 'Insert a libray description here'
+    website = 'https://github.com/sdillon1/GnarlyDialog'
+
+}
+
+
+
+
+
+
 
 android {
     compileSdkVersion 26
@@ -27,12 +77,17 @@ android {
 }
 
 dependencies {
+//    classpath 'com.novoda:bintray-release:0.9'
+
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation 'com.android.support:appcompat-v7:26.1.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
+
+
 }
 
 
