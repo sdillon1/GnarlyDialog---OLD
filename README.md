@@ -1,6 +1,37 @@
 # Gnarly Dialog #
 
 
+
+```java
+final GnarlyDialog gnarlyDialog = new GnarlyDialog(MainActivity.this, GnarlyDialog.GNARLY_DIALOG_TYPE_SUCCESS);
+gnarlyDialog.setGnarlyTitleText("Title");
+gnarlyDialog.setGnarlyContentText("Content");
+gnarlyDialog.setGnarlyPrimaryButtonText("Primary Button");
+gnarlyDialog.setGnarlyPrimaryButtonListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Toast.makeText(MainActivity.this, "Primary button clicked", Toast.LENGTH_SHORT).show();
+                    gnarlyDialog.gnarlyDialogDismiss();
+                }
+            });
+gnarlyDialog.setGnarlySecondaryButtonText("Secondary Button");
+gnarlyDialog.setGnarlySecondaryButtonListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Toast.makeText(MainActivity.this, "Secondary button clicked", Toast.LENGTH_SHORT).show();
+                    gnarlyDialog.gnarlyDialogDismiss();
+                }
+            });
+gnarlyDialog.setGnarlyShouldDismisOnOutsideTouch(false);
+gnarlyDialog.gnarlyDialogShow();
+```
+
+
+
+
+
+
+
 ## TODO ##
   * Figure out how to upload to Bintray
   * Finish cleaning up library and sample app project
